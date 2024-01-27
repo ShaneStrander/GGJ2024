@@ -31,39 +31,9 @@ public class Start_Script : MonoBehaviour
     void Start()
     {
 
-        bool result = EditorUtility.DisplayDialog("Confirmation", "Do you want to proceed?", "Yes", "No");
-
-        // Check the user's choice
-        if (result)
-        {
-            bool confirmedResult = EditorUtility.DisplayDialog("kek", "Excellent.", "OK");
-            if (confirmedResult)
-            {
-                SceneManager.LoadScene("TransparentWindow");
-            }    
-        }
-        else
-        {
-           bool secondResult = EditorUtility.DisplayDialog("w-what", "Pretty Please? Do it for the GameJam!", "Fine", "Nah");
-            if (secondResult)
-            {
-                SceneManager.LoadScene("TransparentWindow");
-            }
-            else
-            {
-                Application.Quit();
-            }
-        }
-
         IntPtr hWnd = GetActiveWindow();
         MARGINS margins = new MARGINS { cxLeftWidth = -1 };
         DwmExtendFrameIntoClientArea(hWnd, ref margins);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
 }
