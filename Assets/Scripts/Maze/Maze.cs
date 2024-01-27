@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Maze : MonoBehaviour
 {
+
     // Start is called before the first frame update
     private void OnMouseEnter()
     {
@@ -13,9 +14,4 @@ public class Maze : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
