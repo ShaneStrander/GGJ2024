@@ -20,6 +20,7 @@ public class cameraTest : MonoBehaviour
 
     public void Delay()
     {
+        webCam.Stop();
         PopUp.SetActive(true);
         Camera.SetActive(false);
     }
