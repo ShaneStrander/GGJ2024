@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Diagnostics;
 
 
 public class mazeToggle : MonoBehaviour
@@ -8,18 +9,21 @@ public class mazeToggle : MonoBehaviour
     public float crossingXValue = 0.0f;
     public GameObject button;
     public GameObject maze;
+    public GameObject crash;
+    public GameObject background;
+    public GameObject grayPanel;
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(maze.activeInHierarchy)
+        if (maze.activeInHierarchy)
         {
-            
+
             // Get the mouse position in screen coordinates
             Vector3 mousePosition = Input.mousePosition;
 
@@ -29,10 +33,26 @@ public class mazeToggle : MonoBehaviour
             // Check if the mouse has crossed the specified X value
             if (worldMousePosition.x > 0)
             {
-                Debug.Log("simulate crash");
-                //Diagnostics.Utils.ForceCrash(ForcedCrashCategory.FatalError);
+                grayPanel.SetActive(true);
+                Cursor.lockState = CursorLockMode.Locked;
+                Invoke("Freeze", 2.5f);
             }
         }
+    }
+
+    void Freeze()
+    {
+        grayPanel.SetActive(false);
+        maze.SetActive(false);
+        background.SetActive(false);
+
+        Invoke("Popup", 1f);
+    }
+
+    void Popup()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        crash.SetActive(true);
     }
 
     public void toggle()
