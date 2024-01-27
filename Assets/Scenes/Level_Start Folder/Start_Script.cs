@@ -4,11 +4,7 @@ using UnityEngine;
 using System.Runtime.InteropServices;
 using System;
 using UnityEditor;
-<<<<<<< Updated upstream
-//using System.Windows.Forms;
-=======
 using UnityEngine.SceneManagement;
->>>>>>> Stashed changes
 
 public class Start_Script : MonoBehaviour
 {
