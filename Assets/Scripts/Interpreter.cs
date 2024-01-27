@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class Interpreter : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    List<string> response = new List<string>();
+    public List<string> Interpret(string userInput)
     {
-        
-    }
+        response.Clear();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        string[] args = userInput.Split();
+
+        if (args[0] == "Tasks")
+        {
+            response.Add("Task 1");
+            response.Add("Task 2");
+            response.Add("Task 3");
+            response.Add("Task 4");
+
+            return response;
+        }
+        else
+        {
+            response.Add("idk what you typed");
+
+            return response;
+        }
+
     }
 }
