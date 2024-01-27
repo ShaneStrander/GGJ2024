@@ -184,6 +184,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MazeWall (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 6926359935237776058, guid: 0b7497af75cb6854db5683adc7570b7f, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -244,6 +248,10 @@ PrefabInstance:
     - target: {fileID: 6926359935237776058, guid: 0b7497af75cb6854db5683adc7570b7f, type: 3}
       propertyPath: m_Name
       value: MazeWall (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926359935237776058, guid: 0b7497af75cb6854db5683adc7570b7f, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -316,6 +324,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MazeWall (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 6926359935237776058, guid: 0b7497af75cb6854db5683adc7570b7f, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -377,6 +389,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MazeWall (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 6926359935237776058, guid: 0b7497af75cb6854db5683adc7570b7f, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -391,7 +407,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 178216224}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Maze
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -406,14 +422,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 178216223}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.4521451, y: 0.24047418, z: 2.9608083}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -536.95215, y: -300.75952, z: 2.9608083}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 364189694}
   - {fileID: 1452259777}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1432661583}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &233536043 stripped
 Transform:
@@ -430,7 +446,7 @@ GameObject:
   m_Component:
   - component: {fileID: 364189694}
   - component: {fileID: 364189693}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Finish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -713,6 +729,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MazeWall (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6926359935237776058, guid: 0b7497af75cb6854db5683adc7570b7f, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -773,6 +793,10 @@ PrefabInstance:
     - target: {fileID: 6926359935237776058, guid: 0b7497af75cb6854db5683adc7570b7f, type: 3}
       propertyPath: m_Name
       value: MazeWall (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926359935237776058, guid: 0b7497af75cb6854db5683adc7570b7f, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -844,6 +868,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MazeWall (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 6926359935237776058, guid: 0b7497af75cb6854db5683adc7570b7f, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -904,6 +932,10 @@ PrefabInstance:
     - target: {fileID: 6926359935237776058, guid: 0b7497af75cb6854db5683adc7570b7f, type: 3}
       propertyPath: m_Name
       value: MazeWall (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926359935237776058, guid: 0b7497af75cb6854db5683adc7570b7f, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -969,6 +1001,10 @@ PrefabInstance:
     - target: {fileID: 6926359935237776058, guid: 0b7497af75cb6854db5683adc7570b7f, type: 3}
       propertyPath: m_Name
       value: MazeWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926359935237776058, guid: 0b7497af75cb6854db5683adc7570b7f, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1113,6 +1149,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MazeWall (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6926359935237776058, guid: 0b7497af75cb6854db5683adc7570b7f, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1177,6 +1217,10 @@ PrefabInstance:
     - target: {fileID: 6926359935237776058, guid: 0b7497af75cb6854db5683adc7570b7f, type: 3}
       propertyPath: m_Name
       value: MazeWall (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926359935237776058, guid: 0b7497af75cb6854db5683adc7570b7f, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1581,6 +1625,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MazeWall (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 6926359935237776058, guid: 0b7497af75cb6854db5683adc7570b7f, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1647,6 +1695,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MazeWall (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 6926359935237776058, guid: 0b7497af75cb6854db5683adc7570b7f, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1711,6 +1763,10 @@ PrefabInstance:
     - target: {fileID: 6926359935237776058, guid: 0b7497af75cb6854db5683adc7570b7f, type: 3}
       propertyPath: m_Name
       value: MazeWall (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926359935237776058, guid: 0b7497af75cb6854db5683adc7570b7f, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1915,6 +1971,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MazeWall (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 6926359935237776058, guid: 0b7497af75cb6854db5683adc7570b7f, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2072,6 +2132,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MazeWall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6926359935237776058, guid: 0b7497af75cb6854db5683adc7570b7f, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2172,6 +2236,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1397216102}
+  - {fileID: 178216224}
   - {fileID: 1954071046}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2236,6 +2301,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MazeWall (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 6926359935237776058, guid: 0b7497af75cb6854db5683adc7570b7f, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2250,7 +2319,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1452259777}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2350,6 +2419,10 @@ PrefabInstance:
     - target: {fileID: 6926359935237776058, guid: 0b7497af75cb6854db5683adc7570b7f, type: 3}
       propertyPath: m_Name
       value: MazeWall (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926359935237776058, guid: 0b7497af75cb6854db5683adc7570b7f, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2511,6 +2584,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MazeWall (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 6926359935237776058, guid: 0b7497af75cb6854db5683adc7570b7f, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2541,7 +2618,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954071045}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2631,6 +2708,27 @@ MonoBehaviour:
   crash: {fileID: 1003841672}
   background: {fileID: 1718873001}
   grayPanel: {fileID: 1954071045}
+  cursorArray:
+  - {fileID: 2800000, guid: fc16d14d369f014429906126c45ba2c1, type: 3}
+  - {fileID: 2800000, guid: 1a513ec396428e446beeb4a3c0d53598, type: 3}
+  - {fileID: 2800000, guid: 1a4d82c97429d834d946aba024dd800f, type: 3}
+  - {fileID: 2800000, guid: b3e554aff0e312c46be69acc7d985a80, type: 3}
+  - {fileID: 2800000, guid: 70091e4dd14efa148985ed284090d50b, type: 3}
+  - {fileID: 2800000, guid: 8bdf18cb2ce44b844bdc86f22d290161, type: 3}
+  - {fileID: 2800000, guid: ced9593f67373304d9233b7140633fd3, type: 3}
+  - {fileID: 2800000, guid: fc7be58af80d0ac469de3c92bc9589d9, type: 3}
+  - {fileID: 2800000, guid: 4dc8d4059cfe1724ea304c9966304a29, type: 3}
+  - {fileID: 2800000, guid: e161362bc4186064d88257534032da8f, type: 3}
+  - {fileID: 2800000, guid: 0c1bca2b867ba7646a69d1ce0c30b868, type: 3}
+  - {fileID: 2800000, guid: b92d6d33394cd9346903e06d842bb0fb, type: 3}
+  - {fileID: 2800000, guid: fb4ad1a41f1c84b46bd4d12a511ccad7, type: 3}
+  - {fileID: 2800000, guid: bd72367529db5ea418845c5800f690c0, type: 3}
+  - {fileID: 2800000, guid: 43fd747d50cfcf94085127cd2776ed31, type: 3}
+  - {fileID: 2800000, guid: 6305a22dddd4d2444bfad88576d4d2d7, type: 3}
+  - {fileID: 2800000, guid: e0f9a637b282ba34d83828eff67f5efc, type: 3}
+  - {fileID: 2800000, guid: 72e849c81a0fe574b94ae50bb6f4476a, type: 3}
+  frameCount: 18
+  frameRate: 0.1
 --- !u!4 &2117617431
 Transform:
   m_ObjectHideFlags: 0
@@ -2657,7 +2755,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 1422272669}
   - {fileID: 1718873003}
-  - {fileID: 178216224}
   - {fileID: 1432661583}
   - {fileID: 879603082}
   - {fileID: 1003841674}

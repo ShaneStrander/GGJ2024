@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Diagnostics;
+using System.Windows.Input;
 
 
 public class mazeToggle : MonoBehaviour
@@ -13,6 +14,15 @@ public class mazeToggle : MonoBehaviour
     public GameObject background;
     public GameObject grayPanel;
 
+    [SerializeField] private Texture2D[] cursorArray;
+    [SerializeField] private int frameCount;
+    [SerializeField] private float frameRate;
+
+    private int currentFrame;
+    private float frameTimer;
+
+    public static bool trigger;
+
     void Start()
     {
 
@@ -21,6 +31,8 @@ public class mazeToggle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        frameTimer -= Time.deltaTime;
+
         if (maze.activeInHierarchy)
         {
 
@@ -34,8 +46,20 @@ public class mazeToggle : MonoBehaviour
             if (worldMousePosition.x > 0)
             {
                 grayPanel.SetActive(true);
-                Cursor.lockState = CursorLockMode.Locked;
-                Invoke("Freeze", 4f);
+                trigger = true;
+                //Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = true;
+                Invoke("Freeze", 2.5f);
+            }
+
+            if (trigger)
+            {
+                if (frameTimer <= 0f)
+                {
+                    frameTimer += frameRate;
+                    currentFrame = (currentFrame + 1) % frameCount;
+                    Cursor.SetCursor(cursorArray[currentFrame], Vector2.zero, CursorMode.Auto);
+                }
             }
         }
     }
@@ -52,6 +76,8 @@ public class mazeToggle : MonoBehaviour
     void Popup()
     {
         Cursor.lockState = CursorLockMode.None;
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+        trigger = false;
         crash.SetActive(true);
     }
 
