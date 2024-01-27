@@ -13,10 +13,16 @@ public class Interpreter : MonoBehaviour
 
         if (args[0] == "Tasks")
         {
-            response.Add("Task 1");
-            response.Add("Task 2");
-            response.Add("Task 3");
-            response.Add("Task 4");
+            response.Add("Task1");
+            response.Add("Task2");
+            response.Add("Task3");
+            response.Add("Task4");
+
+            return response;
+        }
+        else if (args[0] == "Task1")
+        {
+            response.Add("Prepare yourself");
 
             return response;
         }
