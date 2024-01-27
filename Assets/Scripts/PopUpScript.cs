@@ -23,7 +23,7 @@ public class PopUpScript : MonoBehaviour
 
     public void FirstYes()
     {
-        SceneManager.LoadScene("TransparentWindow");
+        SceneManager.LoadScene("Terminal");
     }
 
     public void FirstNo()
@@ -34,7 +34,7 @@ public class PopUpScript : MonoBehaviour
 
     public void Fine()
     {
-        SceneManager.LoadScene("TransparentWindow");
+        SceneManager.LoadScene("Terminal");
     }
 
     public void SecondNo()

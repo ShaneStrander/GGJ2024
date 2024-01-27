@@ -5,16 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TestLevel/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TransparentWindow.unity
     guid: 540005a25fa07de449eee13986772e57
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Terminal.unity
     guid: a019efe190e29bc40a4a368a777f5222
   - enabled: 1
     path: Assets/Scenes/Blow.unity
     guid: bf31ec69e1d362040ae0f769db42e537
+  - enabled: 1
+    path: Assets/Scenes/lvl_break.unity
+    guid: a19ee759b2e43d4418db59c4f41ce775
+  - enabled: 1
+    path: Assets/Scenes/lvl_internet_history.unity
+    guid: 64343330f311b2b45abb6abadff5d336
+  - enabled: 1
+    path: Assets/Scenes/lvl_heartattack.unity
+    guid: ff9c788fa335a014ea45f93769375536
   m_configObjects: {}

@@ -85,6 +85,6 @@ public class InternetHistory : MonoBehaviour
 
     public void GoTerminal()
     {
-        SceneManager.LoadScene("TransparentWindow");
+        SceneManager.LoadScene("Terminal");
     }
 }

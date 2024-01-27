@@ -54,7 +54,7 @@ public class HeartAttackScript : MonoBehaviour
 
     public void NextLevel()
     {
-        SceneManager.LoadScene("TransparentWindow");
+        SceneManager.LoadScene("Terminal");
     }
 
     public void UseSkeletons()

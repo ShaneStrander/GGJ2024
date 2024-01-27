@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Interpreter : MonoBehaviour
 {
@@ -38,6 +39,16 @@ public class Interpreter : MonoBehaviour
         else if (args[0] == "Task1")
         {
             response.Add("Prepare yourself");
+
+            SceneManager.LoadScene("lvl_internet_history");
+
+            return response;
+        }
+        else if (args[0] == "Task2")
+        {
+            response.Add("Prepare yourself");
+
+            SceneManager.LoadScene("lvl_heartattack");
 
             return response;
         }

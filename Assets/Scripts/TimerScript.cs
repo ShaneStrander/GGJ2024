@@ -46,6 +46,6 @@ public class TimerScript : MonoBehaviour
     }
     public void NextLevel()
     {
-        SceneManager.LoadScene("TransparentWindow");
+        SceneManager.LoadScene("Terminal");
     }
 }
