@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class crashClicked : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnMouseDown()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // Perform actions when the user clicks on the object
+        Debug.Log("Object clicked: " + gameObject.name);
     }
 }

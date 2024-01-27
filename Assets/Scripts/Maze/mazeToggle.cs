@@ -35,7 +35,7 @@ public class mazeToggle : MonoBehaviour
             {
                 grayPanel.SetActive(true);
                 Cursor.lockState = CursorLockMode.Locked;
-                Invoke("Freeze", 2.5f);
+                Invoke("Freeze", 4f);
             }
         }
     }
@@ -46,7 +46,7 @@ public class mazeToggle : MonoBehaviour
         maze.SetActive(false);
         background.SetActive(false);
 
-        Invoke("Popup", 1f);
+        Invoke("Popup", 1.5f);
     }
 
     void Popup()
