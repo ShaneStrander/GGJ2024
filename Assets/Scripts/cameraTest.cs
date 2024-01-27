@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class cameraTest : MonoBehaviour
 {
+    public GameObject PopUp;
+    public GameObject Camera;
+
     WebCamTexture webCam;
     public RawImage img;
     void Start()
@@ -12,11 +15,12 @@ public class cameraTest : MonoBehaviour
         webCam = new WebCamTexture();
         img.texture = webCam;
         webCam.Play();
+        Invoke("Delay", 5.0f);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Delay()
     {
-        
+        PopUp.SetActive(true);
+        Camera.SetActive(false);
     }
 }
