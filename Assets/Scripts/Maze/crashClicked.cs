@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class crashClicked : MonoBehaviour
 {
 
-   // public GameObject message;
+    public GameObject message;
+
     private void OnMouseDown()
     {
         // Perform actions when the user clicks on the object
-        Debug.Log("Object clicked: " + gameObject.name);
         gameObject.SetActive(false);
-       // message.SetActive(true);
+        message.SetActive(true);
     }
 
-
+    public void BackToTerminal()
+    {
+        SceneManager.LoadScene("Terminal");
+    }
 }
