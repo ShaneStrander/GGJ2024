@@ -7,6 +7,8 @@ public class BugMovement : MonoBehaviour
     public GameObject[] objectsToInstantiate;
     public int numberOfCopies = 10;
 
+    public GameObject holder;
+
     private float screenWidth;
     private float screenHeight;
 
@@ -28,7 +30,7 @@ public class BugMovement : MonoBehaviour
             for (int j = 0; j < numberOfCopies; j++)
             {
                 int index = i * numberOfCopies + j;
-                instantiatedObjects[index] = Instantiate(objectsToInstantiate[i], GetRandomPosition(), Quaternion.identity);
+                instantiatedObjects[index] = Instantiate(objectsToInstantiate[i], GetRandomPosition(), Quaternion.identity, holder.transform);
                 instantiatedObjects[index].tag = "CloneTag";
                 targetPositions[index] = GetRandomPosition();
             }
