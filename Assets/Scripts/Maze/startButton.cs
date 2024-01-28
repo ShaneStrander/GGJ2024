@@ -8,7 +8,6 @@ public class startButton : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        Debug.Log("test");
         maze.SetActive(true);
         gameObject.SetActive(false);
     }
