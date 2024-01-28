@@ -31,17 +31,38 @@ public class Interpreter : MonoBehaviour
     public List<string> Interpret(string userInput)
     {
         response.Clear();
-
+        if (userInput == "Reward")
+        {
+            if(tasks.Count == 0)
+            {
+                SceneManager.LoadScene("lvl_ending");
+            }
+            else
+            {
+                response.Add("You tryna cheat?");
+            }
+        }
         if (userInput == "Tasks")
         {
-            response.Add("Choose a task by typing it in the terminal to begin...");
-            for (int i = 0; i < tasks.Count; i++)
+
+            if (tasks.Count == 0)
             {
-                response.Add(tasks[i]);
+                response.Add("Congrats... you did it!");
+                response.Add("Type in 'Reward' to get a prize :)");
             }
-            prevResp = "Tasks";
+            else
+            {
+                response.Add("Choose a task by typing it in the terminal to begin...");
+                for (int i = 0; i < tasks.Count; i++)
+                {
+                    response.Add(tasks[i]);
+                }
+                prevResp = "Tasks";
+            }
 
             return response;
+
+            
         }
         // INTERNET HISTORY
         else if (userInput == "Task1" && tasks.Contains("Task1") && prevResp == "Tasks")
