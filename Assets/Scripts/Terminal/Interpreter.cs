@@ -7,15 +7,22 @@ public class Interpreter : MonoBehaviour
 {
     List<string> response = new List<string>();
 
+    List<string> tasks = new List<string>();
+
     List<string> errorResponses = new List<string>();
+
+    public GameObject tracker;
 
     void Start()
     {
+
         errorResponses.Add("What are you trying to say?");
         errorResponses.Add("That wasn't an option");
         errorResponses.Add("You're pretty bad at following instructions");
         errorResponses.Add("b r u h... type the right thing");
         errorResponses.Add("Please listen to me next time");
+
+        CreateTaskList();
     }
 
     public List<string> Interpret(string userInput)
@@ -29,10 +36,10 @@ public class Interpreter : MonoBehaviour
         if (args[0] == "Tasks")
         {
             response.Add("Choose a task by typing it in the terminal to begin...");
-            response.Add("Task1");
-            response.Add("Task2");
-            response.Add("Task3");
-            response.Add("Task4");
+            for (int i = 0; i < tasks.Count; i++)
+            {
+                response.Add(tasks[i]);
+            }
 
             return response;
         }
@@ -40,7 +47,7 @@ public class Interpreter : MonoBehaviour
         {
             response.Add("Prepare yourself");
 
-            SceneManager.LoadScene("lvl_internet_history");
+            SceneManager.LoadScene("lvl_maze");
 
             return response;
         }
@@ -61,5 +68,35 @@ public class Interpreter : MonoBehaviour
             return response;
         }
 
+    }
+
+    public void RemoveTask()
+    {
+        if (SceneManager.GetActiveScene().name == "lvl_maze")
+        {
+            tasks.Remove("Task1");
+        }
+    }
+
+    public void CreateTaskList()
+    {
+
+        scr_sceneTracker track = tracker.GetComponent<scr_sceneTracker>();
+
+        bool isVisited = track.IsSceneVisited("lvl_maze");
+
+        if(isVisited)
+        {
+            tasks.Add("Task2");
+            tasks.Add("Task3");
+            tasks.Add("Task4");
+        }
+        else
+        {
+            tasks.Add("Task1");
+            tasks.Add("Task2");
+            tasks.Add("Task3");
+            tasks.Add("Task4");
+        }
     }
 }
