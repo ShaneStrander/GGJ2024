@@ -13,8 +13,11 @@ public class Interpreter : MonoBehaviour
 
     public GameObject tracker;
 
+    private string prevResp;
+
     void Start()
     {
+        prevResp = string.Empty;
 
         errorResponses.Add("What are you trying to say?");
         errorResponses.Add("That wasn't an option");
@@ -29,41 +32,62 @@ public class Interpreter : MonoBehaviour
     {
         response.Clear();
 
-        string[] args = userInput.Split();
-
-        string prevRes = args[0];
-
-        if (args[0] == "Tasks")
+        if (userInput == "Tasks")
         {
             response.Add("Choose a task by typing it in the terminal to begin...");
             for (int i = 0; i < tasks.Count; i++)
             {
                 response.Add(tasks[i]);
             }
+            prevResp = "Tasks";
 
             return response;
         }
-        else if (args[0] == "Task1")
+        // INTERNET HISTORY
+        else if (userInput == "Task1" && tasks.Contains("Task1") && prevResp == "Tasks")
         {
             response.Add("Prepare yourself");
-
+            SceneManager.LoadScene("lvl_internet_history");
+            prevResp = null;
+            return response;
+        }
+        // MAZE CRASH
+        else if (userInput == "Task2" && tasks.Contains("Task2") && prevResp == "Tasks")
+        {
+            response.Add("Prepare yourself");
             SceneManager.LoadScene("lvl_maze");
-
+            prevResp = null;
             return response;
         }
-        else if (args[0] == "Task2")
+        // HEART ATTACK
+        else if (userInput == "Task3" && tasks.Contains("Task3") && prevResp == "Tasks")
         {
             response.Add("Prepare yourself");
-
             SceneManager.LoadScene("lvl_heartattack");
-
+            prevResp = null;
+            return response;
+        }
+        // BUGS BLOW
+        else if (userInput == "Task4" && tasks.Contains("Task4") && prevResp == "Tasks")
+        {
+            response.Add("Prepare yourself");
+            SceneManager.LoadScene("Blow");
+            prevResp = null;
+            return response;
+        }
+        // CLOWN
+        else if (userInput == "Task5" && tasks.Contains("Task5") && prevResp == "Tasks")
+        {
+            response.Add("Prepare yourself");
+            SceneManager.LoadScene("lvl_clowncamera");
+            prevResp = null;
             return response;
         }
         else
         {
             int randomIndex = Random.Range(0, errorResponses.Count);
             response.Add(errorResponses[randomIndex]);
-            response.Add("Type in the name of a Task below...");
+            response.Add("Try typing 'Tasks'...");
 
             return response;
         }
@@ -81,22 +105,24 @@ public class Interpreter : MonoBehaviour
     public void CreateTaskList()
     {
 
+        tasks.Add("Task1");
+        tasks.Add("Task2");
+        tasks.Add("Task3");
+        tasks.Add("Task4");
+        tasks.Add("Task5");
+
         scr_sceneTracker track = tracker.GetComponent<scr_sceneTracker>();
 
-        bool isVisited = track.IsSceneVisited("lvl_maze");
+        bool isVisited1 = track.IsSceneVisited("lvl_internet_history");
+        bool isVisited2 = track.IsSceneVisited("lvl_maze");
+        bool isVisited3 = track.IsSceneVisited("lvl_heartattack");
+        bool isVisited4 = track.IsSceneVisited("Blow");
+        bool isVisited5 = track.IsSceneVisited("lvl_clowncamera");
 
-        if(isVisited)
-        {
-            tasks.Add("Task2");
-            tasks.Add("Task3");
-            tasks.Add("Task4");
-        }
-        else
-        {
-            tasks.Add("Task1");
-            tasks.Add("Task2");
-            tasks.Add("Task3");
-            tasks.Add("Task4");
-        }
+        if (isVisited1) { tasks.Remove("Task1"); }
+        if (isVisited2) { tasks.Remove("Task2"); }
+        if (isVisited3) { tasks.Remove("Task3"); }
+        if (isVisited4) { tasks.Remove("Task4"); }
+        if (isVisited5) { tasks.Remove("Task5"); }
     }
 }
