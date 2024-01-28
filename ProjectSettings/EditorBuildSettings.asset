@@ -5,12 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TestLevel/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/TransparentWIndow.unity
+  - enabled: 0
+    path: Assets/Scenes/TransparentWindow.unity
     guid: 540005a25fa07de449eee13986772e57
+  - enabled: 1
+    path: Assets/Scenes/Level_Start Folder/Level_Start.unity
+    guid: c74335f883b140f42ba7aa1a8444f344
   - enabled: 1
     path: Assets/Scenes/Terminal.unity
     guid: a019efe190e29bc40a4a368a777f5222
@@ -29,4 +32,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/lvl_maze.unity
     guid: 8fcfc11ee792e1244b8692783f024161
+  - enabled: 1
+    path: Assets/Scenes/lvl_clowncamera.unity
+    guid: f843fec0ab9730a4f8d8fd3fa53588ca
+  - enabled: 1
+    path: Assets/Scenes/lvl_ending.unity
+    guid: f86cefd22e503a647a748197c5c28c13
   m_configObjects: {}

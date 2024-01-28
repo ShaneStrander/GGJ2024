@@ -8,6 +8,7 @@ public class ResetPrefs : MonoBehaviour
     void Start()
     {
         PlayerPrefs.DeleteAll();
+        Application.runInBackground = true;
     }
 
 }

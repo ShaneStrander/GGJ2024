@@ -1725,7 +1725,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 777998896}
         m_TargetAssemblyTypeName: HeartAttackScript, Assembly-CSharp
-        m_MethodName: SecondNo
+        m_MethodName: Return
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

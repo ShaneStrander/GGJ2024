@@ -15,9 +15,13 @@ public class Interpreter : MonoBehaviour
 
     private string prevResp;
 
+    private bool visitedBreak;
+
+
     void Start()
     {
         prevResp = string.Empty;
+        //visitedBreak = false;
 
         errorResponses.Add("What are you trying to say?");
         errorResponses.Add("That wasn't an option");
@@ -30,10 +34,12 @@ public class Interpreter : MonoBehaviour
 
     public List<string> Interpret(string userInput)
     {
+        Debug.Log(visitedBreak);
+
         response.Clear();
-        if (userInput == "Reward")
+        if (userInput == "Reward" && prevResp == "Tasks")
         {
-            if(tasks.Count == 0)
+            if (tasks.Count == 0)
             {
                 SceneManager.LoadScene("lvl_ending");
             }
@@ -49,6 +55,14 @@ public class Interpreter : MonoBehaviour
             {
                 response.Add("Congrats... you did it!");
                 response.Add("Type in 'Reward' to get a prize :)");
+                prevResp = "Tasks";
+            }
+            else if (tasks.Count == 2 && !visitedBreak)
+            {
+                response.Add("Wow! You've completed 3 tasks already");
+                response.Add("Looks likes you deserve a little break");
+                response.Add("Type 'ok' to relax a little...");
+                prevResp = "breakTime";
             }
             else
             {
@@ -62,7 +76,7 @@ public class Interpreter : MonoBehaviour
 
             return response;
 
-            
+
         }
         // INTERNET HISTORY
         else if (userInput == "Task1" && tasks.Contains("Task1") && prevResp == "Tasks")
@@ -104,6 +118,14 @@ public class Interpreter : MonoBehaviour
             prevResp = null;
             return response;
         }
+        else if (userInput == "ok" && !visitedBreak && prevResp == "breakTime")
+        {
+            response.Add("Prepare yourself");
+            SceneManager.LoadScene("lvl_break");
+            prevResp = null;
+            return response;
+        }
+        // ERROR MESSAGE
         else
         {
             int randomIndex = Random.Range(0, errorResponses.Count);
@@ -115,13 +137,13 @@ public class Interpreter : MonoBehaviour
 
     }
 
-    public void RemoveTask()
+   /*public void RemoveTask()
     {
         if (SceneManager.GetActiveScene().name == "lvl_maze")
         {
             tasks.Remove("Task1");
         }
-    }
+    } */
 
     public void CreateTaskList()
     {
@@ -139,6 +161,7 @@ public class Interpreter : MonoBehaviour
         bool isVisited3 = track.IsSceneVisited("lvl_heartattack");
         bool isVisited4 = track.IsSceneVisited("Blow");
         bool isVisited5 = track.IsSceneVisited("lvl_clowncamera");
+        visitedBreak = track.IsSceneVisited("lvl_break");
 
         if (isVisited1) { tasks.Remove("Task1"); }
         if (isVisited2) { tasks.Remove("Task2"); }

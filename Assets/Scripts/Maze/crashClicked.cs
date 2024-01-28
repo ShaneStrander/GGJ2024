@@ -11,7 +11,7 @@ public class crashClicked : MonoBehaviour
     private void OnMouseDown()
     {
         // Perform actions when the user clicks on the object
-        gameObject.SetActive(false);
+        this.gameObject.SetActive(false);
         message.SetActive(true);
     }
 
